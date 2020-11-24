@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Edit Article</h1>
+
+
+    <%= form_for(@article) do |f| %>
+   
+    <li>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+    </li>
+    <li>
+        <%= f.label :content %>
+        <%= f.text_field :content %>
+    </li>
+    <li>
+
+    </li>
+    <li>
+       <%= f.submit %>
+    </li>
+    <%= link_to 'Back to list', articles_path%>
+    <% end %>
+
+
+</div>

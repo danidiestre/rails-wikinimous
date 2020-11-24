@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+Article.destroy_all
+puts 'Start creating articles'
+10.times do 
+    article = Article.create!(title: Faker::Coffee.blend_name, content: Faker::Coffee.notes)
+    puts "#{article.title} -- created"
+end
+puts 'Finished creating articles!'
